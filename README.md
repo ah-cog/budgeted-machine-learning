@@ -1,6 +1,6 @@
-# Budgeted Machine Learning Framework for Bayesian Belief Networks
+# Budgeted Machine Learning with Bayesian Network Experiment Framework
 
-The Budgeted Learning with Bayesian Network Experiment Framework (BLBN-EF)
+The Budgeted Machine Learning with Bayesian Network Experiment Framework (BLBN-EF)
 consists of two main components, in the form of computer programs: (1) the
 _learner_ and (2) the _generator_.  Both of these computer programs are implemented
 in the C programming language and make use of the BLBN application programming
