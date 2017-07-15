@@ -128,8 +128,8 @@ archive_results.sh
 ```
 
 The produced archive will be named based on the current date
-according to the format `results_YYYY-MM-DD.tar.gz` where YYYY is the current
-year, MM is the current month, and DD is the current date.  For example, an
+according to the format `results_YYYY-MM-DD.tar.gz` where `YYYY` is the current
+year, `MM` is the current month, and `DD` is the current date.  For example, an
 archive produced on June 30, 2011 would be named `results_2011-06-30.tar.gz`.
 
 # Usage
