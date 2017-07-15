@@ -1,9 +1,5 @@
 # Budgeted Machine Learning Framework for Bayesian Belief Networks
 
-[Norsys Netica](https://www.norsys.com/netica.html)
-[Netica APIs](https://www.norsys.com/netica_api.html)
-[Netica C API](https://www.norsys.com/netica_c_api.htm)
-
 The Budgeted Learning with Bayesian Network Experiment Framework (BLBN-EF)
 consists of two main components, in the form of computer programs: (1) the
 _learner_ and (2) the _generator_.  Both of these computer programs are implemented
@@ -170,12 +166,6 @@ Here's the command that I used to generate a `*.dne` file from a `*.neta` file:
 
 I have a file located at `./data/Animals/Animals.neta` and this command creates the file `./data/Animals/Animals.dne`.
 
-# Dependencies
-
-[Norsys Netica](https://www.norsys.com/netica.html)
-[Netica APIs](https://www.norsys.com/netica_api.html)
-[Netica C API](https://www.norsys.com/netica_c_api.htm)
-
 # Applications
 
 This code was used by Yaling Zheng in her doctoral research for her dissertation. Her code is available on GitHub in her [blbn_1st](https://github.com/YalingZheng/blbn_1st) and [blbn_2nd](https://github.com/YalingZheng/blbn_2nd) repositories. Her dissertation, _Machine Learning with Incomplete Information_ is available on [DigitalCommons@University of Nebraska - Lincoln](http://digitalcommons.unl.edu/dissertations/AAI3487272/).
@@ -184,3 +174,8 @@ The citation for Yaling's dissertation is below:
 
 _Zheng, Yaling, "Machine learning with incomplete information" (2011). ETD collection for University of Nebraska - Lincoln. AAI3487272. http://digitalcommons.unl.edu/dissertations/AAI3487272_
 
+# Dependencies
+
+- [Norsys Netica](https://www.norsys.com/netica.html)
+- [Netica APIs](https://www.norsys.com/netica_api.html)
+- [Netica C API](https://www.norsys.com/netica_c_api.htm)
