@@ -134,15 +134,13 @@ archive produced on June 30, 2011 would be named `results_2011-06-30.tar.gz`.
 
 # Usage
 
-## `blbn_generator`
-
-Compile the generator with the following command:
+Compile `blbn_generator` with the following command:
 
 ```
 make generator
 ```
 
-Run the generator with the following command:
+Run `blbn_generator` with the following command:
 
 The short answer is that I generated the data sets using the `blbn_generator` program with input files that were the parameterized networks from the Netica Net Repository on the Norsys website. I wrote brief instructions about using the `blbn_generator` program in the README I wrote for you (which I've also attached to this email).  The general usage syntax for this program is as follows:
 
