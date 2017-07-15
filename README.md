@@ -22,7 +22,7 @@ To effectively use the BLBN-EF and BLBN API, it is crucial to be familiar with
 the Netica C API, since the BLBN-EF depends on the BLBN API, which in turn
 depends on the Netica C API.
 
-# HOW TO COMPILE BLBN-EF PROGRAMS
+# How to Compile BLBN-EF Programs
 
 The BLBN-EF must be compiled on the Linux operating system.  The BLBN-EF was
 designed to be compatible with the Holland Computing Center's (HCC) Prairiefire
@@ -58,32 +58,30 @@ learner (however, this method should be considered a last resort, and should
 be used only when the Makefile cannot be used):
 
 ```
-	/util/comp/gcc/4.4.1/bin/gcc ./lib/NeticaEx.o ./src/blbn/blbn.c \
-		./src/blbn_learner.c -o blbn_learner -L"./lib" -lm \
-		-lnetica -lpthread -lstdc++
+/util/comp/gcc/4.4.1/bin/gcc ./lib/NeticaEx.o ./src/blbn/blbn.c \
+	./src/blbn_learner.c -o blbn_learner -L"./lib" -lm \
+	-lnetica -lpthread -lstdc++
 ```
 
 Likewise, the following command can be run to manually compile the generator:
 
 ```
-	/util/comp/gcc/4.4.1/bin/gcc ./lib/NeticaEx.o ./src/blbn_generator.c \
-		-o blbn_generator -I"./src" -L"./lib" -lm -lnetica \
-		-lpthread -lstdc++
+/util/comp/gcc/4.4.1/bin/gcc ./lib/NeticaEx.o ./src/blbn_generator.c \
+	-o blbn_generator -I"./src" -L"./lib" -lm -lnetica \
+	-lpthread -lstdc++
 ```
 
-For instructions on running the compiled 'blbn_learner' and 'blbn_generator'
-executables on Prairiefire, go to the section named "RUNNING EXPERIMENTS USING
-THE BLBN-EF".
+For instructions on running the compiled `blbn_learner` and `blbn_generator`
+executables on Prairiefire, go to the section named "Running Experiments Using 
+the BLBN-EF".
 
-For instructions on how to use the make command:
-http://www.gnu.org/software/make/manual/make.html
+For instructions on how to use the make command visit the [make documentation](http://www.gnu.org/software/make/manual/make.html).
 
-For information about the HCC Prairiefire cluster:
-http://hcc.unl.edu/facilities/index.php#pf
+For information about accessing the Holland Computing Center Prairiefire cluster or its successors, visit the [HCC website](http://hcc.unl.edu/).
 
-#  RUNNING EXPERIMENTS USING THE BLBN-EF
+# Running Experiments Using the BLBN-EF
 
-To run an experiment using the BLBN-EF, use one of the included run scripts.
+To run an experiment using BLBN-EF, use one of the included run scripts.
 Scripts are included for running the experiments on a single laptop or desktop
 (running Linux) with processes that run in a serial or parallel manner, and for
 submitting jobs to be run as independent processes on the HCC Prairiefire
@@ -111,38 +109,21 @@ one of the cluster's nodes.
 
 A Bash shell script such as this must be created for each experiment.
 
-TODO: Describe run scripts that are used to run locally (serial, parallel)
-
-TODO: Describe command for manually running a specific fold in the experiment
-
-## CREATING/CONFIGURING AN EXPERIMENT
-
-TODO: Describe required input data files, how to run generator to produce individual folds
+## Creating and Configuring an Experiment
 
 To create an experiment, a Bayesian network structure file is required.  This
-file will have either the extension *.dne or *.neta.  Of these two extensions,
-the extension *.dne should be preferred since it is a text file and can be
-read and modified easily by humans in a text editor.  The extension *.neta is
+file will have either the extension `*.dne` or `*.neta`.  Of these two extensions,
+the extension `*.dne` should be preferred since it is a text file and can be
+read and modified easily by humans in a text editor.  The extension `*.neta` is
 a binary file format that is not intended to be viewed or modified in a text
 editor.
 
-*.dne or *.neta (this will be downloaded from the web or )
---> Generate
-
-## AGGREGATING EXPERIMENT RESULTS
-
-TODO: How results are saved (i.e., according to fold), what is saved, Ruby script for aggregating results, where they must be located (/results/ is recursively read), where the aggregated results will be saved, what is useful for (scripts for plotting)
-
-## GENERATING PLOTS OF AGGREGATED RESULTS
-
-TODO: Scripts exist to generate plots using gnuplot, where located, how to run/modify scripts, what is produced
-
-## ARCHIVING EXPERIMENT RESULTS
+## Archiving Experiment Results
 
 Because an experiment produced many results files (i.e., output files) in the
-/results/ directory, it may be desirable to periodically compress and archive
+`/results/` directory, it may be desirable to periodically compress and archive
 all files produced by experiments.  The BLBN-EF has a script file that
-produces a compressed archive (in tar.gz format) of the /results/ directory and
+produces a compressed archive (in tar.gz format) of the `/results/` directory and
 all subdirectories that preserves the directory hierarchy and all file
 permissions.  To execute this script, run the following command:
 
@@ -151,11 +132,13 @@ archive_results.sh
 ```
 
 The produced archive will be named based on the current date
-according to the format 'results_YYYY-MM-DD.tar.gz' where YYYY is the current
+according to the format `results_YYYY-MM-DD.tar.gz` where YYYY is the current
 year, MM is the current month, and DD is the current date.  For example, an
-archive produced on June 30, 2011 would be named 'results_2011-06-30.tar.gz'.
+archive produced on June 30, 2011 would be named `results_2011-06-30.tar.gz`.
 
-## BLBN_GENERATOR
+# Usage
+
+## `blbn_generator`
 
 Compile the generator with the following command:
 
@@ -174,8 +157,6 @@ For example, to run the generator for the BreastCancerWisconsin data set:
 ```
 ./blbn_generator -d ./data_base/BreastCancerWisconsin/BreastCancerWisconsin.cas -m ./data_base/BreastCancerWisconsin/BreastCancerWisconsin.dne -c 1000 -t Class
 ```
-
-# Usage
 
 The short answer is that I generated the data sets using the `blbn_generator` program with input files that were the parameterized networks from the Netica Net Repository on the Norsys website. I wrote brief instructions about using the `blbn_generator` program in the README I wrote for you (which I've also attached to this email).  The general usage syntax for this program is as follows:
 
