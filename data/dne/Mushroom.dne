@@ -1,0 +1,515 @@
+// ~->[DNET-1]->~
+
+// File created by ScottS at UNebraska using Netica 4.05 on 07/17/09 at 00:47:40.
+
+bnet Mushroom {
+autoupdate = FALSE;
+title = "Mushroom";
+
+visual V1 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 10;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	resolution = 72;
+	drawingbounds = (1152, 720);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0xc0c0c0;};
+	NodeSet Nature {BuiltIn = 1; Color = 0xf8eed2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0xd3caa6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0xc8c8c8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0xffffff;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0xffffb4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0xffbdbd;};
+	NodeSet Decision {BuiltIn = 1; Color = 0xdee8ff;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0xf0fafa;};
+	NodeSet Title {BuiltIn = 1; Color = 0xffffff;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		landscape = FALSE;
+		magnify = 1;
+		};
+	};
+
+node Class {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (e, p);
+	parents = ();
+	probs = 
+		// e            p            
+		  (0.517967,    0.482033);
+	numcases = 8126;
+	title = "Class";
+	visual V1 {
+		center = (942, 244);
+		height = 1;
+		};
+	};
+
+node CapShape {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, c, f, k, s, x);
+	parents = (Class);
+	probs = 
+		// b            c            f            k            s            x              // Class 
+		 ((0.09610821,  2.373042e-4, 0.3789749,   0.05434267,  0.00783104,  0.4625059),    // e     
+		  (0.01249363,  0.00127486,  0.3969913,   0.1532381,   2.54972e-4,  0.4357471));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4214,         // e     
+		   3922);        // p     ;
+	title = "CapShape";
+	visual V1 {
+		center = (286, 556);
+		height = 2;
+		};
+	};
+
+node CapSurface {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (f, g, s, y);
+	parents = (Class);
+	probs = 
+		// f            g            s            y              // Class 
+		 ((0.3706078,   2.374169e-4, 0.2718424,   0.3573124),    // e     
+		  (0.1941327,   0.00127551,  0.3604592,   0.4441327));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4212,         // e     
+		   3920);        // p     ;
+	title = "CapSurface";
+	visual V1 {
+		center = (346, 556);
+		height = 3;
+		};
+	};
+
+node CapColor {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, c, e, g, n, p, r, u, w, y);
+	parents = (Class);
+	probs = 
+		// b            c            e            g            n            p            r            u            w            y              // Class 
+		 ((0.01161688,  0.007823613, 0.1481745,   0.2449028,   0.2999052,   0.01351351,  0.004030346, 0.004030346, 0.1709341,   0.09506875),   // e     
+		  (0.03082017,  0.003311258, 0.2233826,   0.2060622,   0.2600611,   0.02266938,  2.547122e-4, 2.547122e-4, 0.08176261,  0.1714213));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4218,         // e     
+		   3926);        // p     ;
+	title = "CapColor";
+	visual V1 {
+		center = (406, 556);
+		height = 4;
+		};
+	};
+
+node Bruises {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (f, t);
+	parents = (Class);
+	probs = 
+		// f            t              // Class 
+		 ((0.3460808,   0.6539192),    // e     
+		  (0.8404799,   0.1595202));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4210,         // e     
+		   3918);        // p     ;
+	title = "Bruises";
+	visual V1 {
+		center = (466, 556);
+		height = 5;
+		};
+	};
+
+node Odor {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, c, f, l, m, n, p, s, y);
+	parents = (Class);
+	probs = 
+		// a            c            f            l            m            n            p            s            y              // Class 
+		 ((0.0950913,   2.371354e-4, 2.371354e-4, 0.0950913,   2.371354e-4, 0.8083946,   2.371354e-4, 2.371354e-4, 2.371354e-4),  // e     
+		  (2.547771e-4, 0.04917197,  0.5505732,   2.547771e-4, 0.009426751, 0.03082803,  0.06547771,  0.1470064,   0.1470064));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4217,         // e     
+		   3925);        // p     ;
+	title = "Odor";
+	visual V1 {
+		center = (526, 556);
+		height = 6;
+		};
+	};
+
+node GillAttachment {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, d, f, n);
+	parents = (Class);
+	probs = 
+		// a            d            f            n              // Class 
+		 ((0.04582146,  2.374169e-4, 0.9537037,   2.374169e-4),  // e     
+		  (0.004846939, 2.55102e-4,  0.9946429,   2.55102e-4));  // p     ;
+	numcases = 
+		                 // Class 
+		  (4212,         // e     
+		   3920);        // p     ;
+	title = "GillAttachment";
+	visual V1 {
+		center = (586, 556);
+		height = 7;
+		};
+	};
+
+node GillSpacing {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (c, d, w);
+	parents = (Class);
+	probs = 
+		// c            d            w              // Class 
+		 ((0.7145571,   2.374733e-4, 0.2852054),    // e     
+		  (0.970911,    2.551671e-4, 0.02883389));  // p     ;
+	numcases = 
+		                 // Class 
+		  (4211,         // e     
+		   3919);        // p     ;
+	title = "GillSpacing";
+	visual V1 {
+		center = (646, 556);
+		height = 8;
+		};
+	};
+
+node GillSize {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, n);
+	parents = (Class);
+	probs = 
+		// b            n              // Class 
+		 ((0.9313539,   0.06864608),   // e     
+		  (0.4321082,   0.5678918));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4210,         // e     
+		   3918);        // p     ;
+	title = "GillSize";
+	visual V1 {
+		center = (706, 556);
+		height = 9;
+		};
+	};
+
+node GillColor {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, e, g, h, k, n, o, p, r, u, w, y);
+	parents = (Class);
+	probs = 
+		// b            e            g            h            k            n            o            p            r            u            w            y              // Class 
+		 ((2.369668e-4, 0.02298578,  0.05900474,  0.0485782,   0.08175355,  0.2220379,   0.01540284,  0.2021327,   2.369668e-4, 0.1054502,   0.2267773,   0.01540284),   // e     
+		  (0.4401731,   2.545825e-4, 0.1285641,   0.1346741,   0.01654786,  0.02876782,  2.545825e-4, 0.1631874,   0.006364562, 0.01247454,  0.06288187,  0.005855397)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4220,         // e     
+		   3928);        // p     ;
+	title = "GillColor";
+	visual V1 {
+		center = (766, 556);
+		height = 10;
+		};
+	};
+
+node StalkShape {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (e, t);
+	parents = (Class);
+	probs = 
+		// e            t              // Class 
+		 ((0.3840855,   0.6159145),    // e     
+		  (0.4851965,   0.5148035));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4210,         // e     
+		   3918);        // p     ;
+	title = "StalkShape";
+	visual V1 {
+		center = (826, 556);
+		height = 11;
+		};
+	};
+
+node StalkRoot {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, c, e, r, u, z);
+	parents = (Class);
+	probs = 
+		// b            c            e            r            u            z              // Class 
+		 ((0.5498,      0.1468231,   0.2475673,   0.05523755,  2.862049e-4, 2.862049e-4),  // e     
+		  (0.8589269,   0.02081406,  0.1188714,   4.625347e-4, 4.625347e-4, 4.625347e-4)); // p     ;
+	numcases = 
+		                 // Class 
+		  (3494,         // e     
+		   2162);        // p     ;
+	title = "StalkRoot";
+	visual V1 {
+		center = (886, 556);
+		height = 12;
+		};
+	};
+
+node StalkSurfaceAboveRing {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (f, k, s, y);
+	parents = (Class);
+	probs = 
+		// f            k            s            y              // Class 
+		 ((0.09710351,  0.03442545,  0.864435,    0.004036088),  // e     
+		  (0.0369898,   0.5686225,   0.3920918,   0.002295918)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4212,         // e     
+		   3920);        // p     ;
+	title = "StalkSurfaceAboveRing";
+	visual V1 {
+		center = (986, 556);
+		height = 13;
+		};
+	};
+
+node StalkSurfaceBelowRing {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (f, k, s, y);
+	parents = (Class);
+	probs = 
+		// f            k            s            y              // Class 
+		 ((0.1084995,   0.03442545,  0.8074549,   0.04962013),   // e     
+		  (0.0369898,   0.5512755,   0.3920918,   0.01964286));  // p     ;
+	numcases = 
+		                 // Class 
+		  (4212,         // e     
+		   3920);        // p     ;
+	title = "StalkSurfaceBelowRing";
+	visual V1 {
+		center = (1046, 556);
+		height = 14;
+		};
+	};
+
+node StalkColorAboveRing {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, c, e, g, n, o, p, w, y);
+	parents = (Class);
+	probs = 
+		// b            c            e            g            n            o            p            w            y              // Class 
+		 ((2.371354e-4, 2.371354e-4, 0.02300213,  0.1368271,   0.004031302, 0.04576713,  0.1368271,   0.6528338,   2.371354e-4),  // e     
+		  (0.1103185,   0.009426751, 2.547771e-4, 2.547771e-4, 0.1103185,   2.547771e-4, 0.3304459,   0.4364331,   0.002292994)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4217,         // e     
+		   3925);        // p     ;
+	title = "StalkColorAboveRing";
+	visual V1 {
+		center = (1069, 556);
+		height = 15;
+		};
+	};
+
+node StalkColorBelowRing {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, c, e, g, n, o, p, w, y);
+	parents = (Class);
+	probs = 
+		// b            c            e            g            n            o            p            w            y              // Class 
+		 ((2.371354e-4, 2.371354e-4, 0.02300213,  0.1368271,   0.0154138,   0.04576713,  0.1368271,   0.6414512,   2.371354e-4),  // e     
+		  (0.1103185,   0.009426751, 2.547771e-4, 2.547771e-4, 0.1143949,   2.547771e-4, 0.3304459,   0.4282803,   0.006369427)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4217,         // e     
+		   3925);        // p     ;
+	title = "StalkColorBelowRing";
+	visual V1 {
+		center = (1069, 556);
+		height = 16;
+		};
+	};
+
+node VeilType {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (p, u);
+	parents = (Class);
+	probs = 
+		// p            u              // Class 
+		 ((0.9997625,   2.375297e-4),  // e     
+		  (0.9997448,   2.552323e-4)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4210,         // e     
+		   3918);        // p     ;
+	title = "VeilType";
+	visual V1 {
+		center = (1103, 556);
+		height = 17;
+		};
+	};
+
+node VeilColor {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (n, o, w, y);
+	parents = (Class);
+	probs = 
+		// n            o            w            y              // Class 
+		 ((0.02302944,  0.02302944,  0.9537037,   2.374169e-4),  // e     
+		  (2.55102e-4,  2.55102e-4,  0.9971939,   0.002295918)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4212,         // e     
+		   3920);        // p     ;
+	title = "VeilColor";
+	visual V1 {
+		center = (1103, 556);
+		height = 18;
+		};
+	};
+
+node RingNumber {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (n, o, t);
+	parents = (Class);
+	probs = 
+		// n            o            t              // Class 
+		 ((2.374733e-4, 0.8741391,   0.1256234),    // e     
+		  (0.009441184, 0.9719316,   0.0186272));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4211,         // e     
+		   3919);        // p     ;
+	title = "RingNumber";
+	visual V1 {
+		center = (1103, 556);
+		height = 19;
+		};
+	};
+
+node RingType {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (c, e, f, l, n, p, s, z);
+	parents = (Class);
+	probs = 
+		// c            e            f            l            n            p            s            z              // Class 
+		 ((2.371916e-4, 0.2393264,   0.01162239,  2.371916e-4, 2.371916e-4, 0.7478653,   2.371916e-4, 2.371916e-4),  // e     
+		  (2.54842e-4,  0.4508155,   2.54842e-4,  0.3305301,   0.009429154, 0.2082059,   2.54842e-4,  2.54842e-4));  // p     ;
+	numcases = 
+		                 // Class 
+		  (4216,         // e     
+		   3924);        // p     ;
+	title = "RingType";
+	visual V1 {
+		center = (1103, 556);
+		height = 20;
+		};
+	};
+
+node SporePrintColor {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (b, h, k, n, o, r, u, w, y);
+	parents = (Class);
+	probs = 
+		// b            h            k            n            o            r            u            w            y              // Class 
+		 ((0.01161963,  0.01161963,  0.3910363,   0.4138013,   0.01161963,  2.371354e-4, 0.01161963,  0.1368271,   0.01161963),   // e     
+		  (2.547771e-4, 0.4038216,   0.05732484,  0.05732484,  2.547771e-4, 0.01859873,  2.547771e-4, 0.4619108,   2.547771e-4)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4217,         // e     
+		   3925);        // p     ;
+	title = "SporePrintColor";
+	visual V1 {
+		center = (1086, 556);
+		height = 21;
+		};
+	};
+
+node Population {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (a, c, n, s, v, y);
+	parents = (Class);
+	probs = 
+		// a            c            n            s            v            y              // Class 
+		 ((0.09136213,  0.06858092,  0.09515899,  0.209065,    0.2831039,   0.252729),     // e     
+		  (2.54972e-4,  0.01351351,  2.54972e-4,  0.09408465,  0.7264151,   0.1654768));   // p     ;
+	numcases = 
+		                 // Class 
+		  (4214,         // e     
+		   3922);        // p     ;
+	title = "Population";
+	visual V1 {
+		center = (1103, 556);
+		height = 22;
+		};
+	};
+
+node Habitat {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (d, g, l, m, p, u, w);
+	parents = (Class);
+	probs = 
+		// d            g            l            m            p            u            w              // Class 
+		 ((0.4462633,   0.3342823,   0.05717675,  0.06097272,  0.03250296,  0.02301305,  0.04578885),   // e     
+		  (0.3234769,   0.1888861,   0.1511598,   0.009431558, 0.2572011,   0.0695896,   2.549069e-4)); // p     ;
+	numcases = 
+		                 // Class 
+		  (4215,         // e     
+		   3923);        // p     ;
+	title = "Habitat";
+	visual V1 {
+		center = (1103, 556);
+		height = 23;
+		};
+	};
+};

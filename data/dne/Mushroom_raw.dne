@@ -1,0 +1,422 @@
+// ~->[DNET-1]->~
+
+bnet Network1 {
+    title = "Mushroom";
+    comment = "";
+    visual V1 {
+    };
+
+node CapShape {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "CapShape";
+    parents = (Class);
+    states = (b, c, f, k, s, x);
+    probs = 
+        ((0.16666667, 0.16666667, 0.16666667, 0.16666667, 0.16666667, 
+        0.16666667),
+        (0.16666667, 0.16666667, 0.16666667, 0.16666667, 0.16666667, 
+        0.16666667));
+    user U1 {
+    };
+visual V1 {
+    center = (286, 556);
+};
+};
+
+node CapSurface {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "CapSurface";
+    parents = (Class);
+    states = (f, g, s, y);
+    probs = 
+        ((0.25000000, 0.25000000, 0.25000000, 0.25000000),
+        (0.25000000, 0.25000000, 0.25000000, 0.25000000));
+    user U1 {
+    };
+visual V1 {
+    center = (346, 556);
+};
+};
+
+node CapColor {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "CapColor";
+    parents = (Class);
+    states = (b, c, e, g, n, p, r, u, w, y);
+    probs = 
+        ((0.10000000, 0.10000000, 0.10000000, 0.10000000, 0.10000000, 
+        0.10000000, 0.10000000, 0.10000000, 0.10000000, 0.10000000),
+        (0.10000000, 0.10000000, 0.10000000, 0.10000000, 0.10000000, 
+        0.10000000, 0.10000000, 0.10000000, 0.10000000, 0.10000000));
+    user U1 {
+    };
+visual V1 {
+    center = (406, 556);
+};
+};
+
+node Bruises {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "Bruises";
+    parents = (Class);
+    states = (f, t);
+    probs = 
+        ((0.50000000, 0.50000000),
+        (0.50000000, 0.50000000));
+    user U1 {
+    };
+visual V1 {
+    center = (466, 556);
+};
+};
+
+node Odor {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "Odor";
+    parents = (Class);
+    states = (a, c, f, l, m, n, p, s, y);
+    probs = 
+        ((0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111),
+        (0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111));
+    user U1 {
+    };
+visual V1 {
+    center = (526, 556);
+};
+};
+
+node GillAttachment {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "GillAttachment";
+    parents = (Class);
+    states = (a, d, f, n);
+    probs = 
+        ((0.25000000, 0.25000000, 0.25000000, 0.25000000),
+        (0.25000000, 0.25000000, 0.25000000, 0.25000000));
+    user U1 {
+    };
+visual V1 {
+    center = (586, 556);
+};
+};
+
+node GillSpacing {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "GillSpacing";
+    parents = (Class);
+    states = (c, d, w);
+    probs = 
+        ((0.33333333, 0.33333333, 0.33333333),
+        (0.33333333, 0.33333333, 0.33333333));
+    user U1 {
+    };
+visual V1 {
+    center = (646, 556);
+};
+};
+
+node GillSize {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "GillSize";
+    parents = (Class);
+    states = (b, n);
+    probs = 
+        ((0.50000000, 0.50000000),
+        (0.50000000, 0.50000000));
+    user U1 {
+    };
+visual V1 {
+    center = (706, 556);
+};
+};
+
+node GillColor {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "GillColor";
+    parents = (Class);
+    states = (b, e, g, h, k, n, o, p, r, u, w, y);
+    probs = 
+        ((0.08333333, 0.08333333, 0.08333333, 0.08333333, 0.08333333, 
+        0.08333333, 0.08333333, 0.08333333, 0.08333333, 0.08333333, 
+        0.08333333, 0.08333333),
+        (0.08333333, 0.08333333, 0.08333333, 0.08333333, 0.08333333, 
+        0.08333333, 0.08333333, 0.08333333, 0.08333333, 0.08333333, 
+        0.08333333, 0.08333333));
+    user U1 {
+    };
+visual V1 {
+    center = (766, 556);
+};
+};
+
+node StalkShape {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "StalkShape";
+    parents = (Class);
+    states = (e, t);
+    probs = 
+        ((0.50000000, 0.50000000),
+        (0.50000000, 0.50000000));
+    user U1 {
+    };
+visual V1 {
+    center = (826, 556);
+};
+};
+
+node StalkRoot {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "StalkRoot";
+    parents = (Class);
+    states = (b, c, e, r, u, z);
+    probs = 
+        ((0.16666667, 0.16666667, 0.16666667, 0.16666667, 0.16666667, 
+        0.16666667),
+        (0.16666667, 0.16666667, 0.16666667, 0.16666667, 0.16666667, 
+        0.16666667));
+    user U1 {
+    };
+visual V1 {
+    center = (886, 556);
+};
+};
+
+node StalkSurfaceAboveRing {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "StalkSurfaceAboveRing";
+    parents = (Class);
+    states = (f, k, s, y);
+    probs = 
+        ((0.25000000, 0.25000000, 0.25000000, 0.25000000),
+        (0.25000000, 0.25000000, 0.25000000, 0.25000000));
+    user U1 {
+    };
+visual V1 {
+    center = (986, 556);
+};
+};
+
+node StalkSurfaceBelowRing {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "StalkSurfaceBelowRing";
+    parents = (Class);
+    states = (f, k, s, y);
+    probs = 
+        ((0.25000000, 0.25000000, 0.25000000, 0.25000000),
+        (0.25000000, 0.25000000, 0.25000000, 0.25000000));
+    user U1 {
+    };
+visual V1 {
+    center = (1046, 556);
+};
+};
+
+node StalkColorAboveRing {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "StalkColorAboveRing";
+    parents = (Class);
+    states = (b, c, e, g, n, o, p, w, y);
+    probs = 
+        ((0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111),
+        (0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111));
+    user U1 {
+    };
+visual V1 {
+    center = (1106, 556);
+};
+};
+
+node StalkColorBelowRing {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "StalkColorBelowRing";
+    parents = (Class);
+    states = (b, c, e, g, n, o, p, w, y);
+    probs = 
+        ((0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111),
+        (0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111));
+    user U1 {
+    };
+visual V1 {
+    center = (1166, 556);
+};
+};
+
+node VeilType {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "VeilType";
+    parents = (Class);
+    states = (p, u);
+    probs = 
+        ((0.50000000, 0.50000000),
+        (0.50000000, 0.50000000));
+    user U1 {
+    };
+visual V1 {
+    center = (1226, 556);
+};
+};
+
+node VeilColor {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "VeilColor";
+    parents = (Class);
+    states = (n, o, w, y);
+    probs = 
+        ((0.25000000, 0.25000000, 0.25000000, 0.25000000),
+        (0.25000000, 0.25000000, 0.25000000, 0.25000000));
+    user U1 {
+    };
+visual V1 {
+    center = (1286, 556);
+};
+};
+
+node RingNumber {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "RingNumber";
+    parents = (Class);
+    states = (n, o, t);
+    probs = 
+        ((0.33333333, 0.33333333, 0.33333333),
+        (0.33333333, 0.33333333, 0.33333333));
+    user U1 {
+    };
+visual V1 {
+    center = (1346, 556);
+};
+};
+
+node RingType {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "RingType";
+    parents = (Class);
+    states = (c, e, f, l, n, p, s, z);
+    probs = 
+        ((0.12500000, 0.12500000, 0.12500000, 0.12500000, 0.12500000, 
+        0.12500000, 0.12500000, 0.12500000),
+        (0.12500000, 0.12500000, 0.12500000, 0.12500000, 0.12500000, 
+        0.12500000, 0.12500000, 0.12500000));
+    user U1 {
+    };
+visual V1 {
+    center = (1406, 556);
+};
+};
+
+node SporePrintColor {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "SporePrintColor";
+    parents = (Class);
+    states = (b, h, k, n, o, r, u, w, y);
+    probs = 
+        ((0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111),
+        (0.11111111, 0.11111111, 0.11111111, 0.11111111, 0.11111111, 
+        0.11111111, 0.11111111, 0.11111111, 0.11111111));
+    user U1 {
+    };
+visual V1 {
+    center = (1466, 556);
+};
+};
+
+node Population {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "Population";
+    parents = (Class);
+    states = (a, c, n, s, v, y);
+    probs = 
+        ((0.16666667, 0.16666667, 0.16666667, 0.16666667, 0.16666667, 
+        0.16666667),
+        (0.16666667, 0.16666667, 0.16666667, 0.16666667, 0.16666667, 
+        0.16666667));
+    user U1 {
+    };
+visual V1 {
+    center = (1526, 556);
+};
+};
+
+node Habitat {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "Habitat";
+    parents = (Class);
+    states = (d, g, l, m, p, u, w);
+    probs = 
+        ((0.14285714, 0.14285714, 0.14285714, 0.14285714, 0.14285714, 
+        0.14285714, 0.14285714),
+        (0.14285714, 0.14285714, 0.14285714, 0.14285714, 0.14285714, 
+        0.14285714, 0.14285714));
+    user U1 {
+    };
+visual V1 {
+    center = (1586, 556);
+};
+};
+
+node Class {
+    kind = NATURE;
+    discrete = TRUE;
+    chance = CHANCE;
+    title = "Class";
+    parents = ();
+    states = (e, p);
+    probs = 
+        (0.50000000, 0.50000000);
+    user U1 {
+    };
+visual V1 {
+    center = (942, 244);
+};
+};
+};

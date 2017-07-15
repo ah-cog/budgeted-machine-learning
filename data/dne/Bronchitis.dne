@@ -1,0 +1,139 @@
+// ~->[DNET-1]->~
+
+// File created by an unlicensed user using Netica 4.08 on Apr 26, 2009 at 20:38:24.
+
+bnet Smoker {
+autoupdate = FALSE;
+whenchanged = 1240423262;
+
+visual V2 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 10;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	windowposn = (86, 85, 1163, 538);
+	resolution = 72;
+	drawingbounds = (3482, 1807);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0xc0c0c0;};
+	NodeSet Nature {BuiltIn = 1; Color = 0xf8eed2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0xd3caa6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0xc8c8c8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0xffffff;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0xffffb4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0xffbdbd;};
+	NodeSet Decision {BuiltIn = 1; Color = 0xdee8ff;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0xf0fafa;};
+	NodeSet Title {BuiltIn = 1; Color = 0xffffff;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		landscape = FALSE;
+		magnify = 1;
+		};
+	};
+
+node HistoryOfSmoking {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (yes, no);
+	statetitles = ("There is a history of smoking", "There is no history of smoking");
+	parents = ();
+	probs = 
+		// There is a histo There is no hist 
+		  (0.2,         0.8);
+	title = "History of Smoking";
+	whenchanged = 1240423262;
+	belief = (0.2, 0.8);
+	visual V2 {
+		center = (576, 228);
+		height = 1;
+		};
+	};
+
+node Bronchitis {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (present, absent);
+	statetitles = ("Bronchitis is present", "Bronchitis is absent");
+	parents = (HistoryOfSmoking);
+	probs = 
+		// Bronchitis is pr Bronchitis is ab   // HistoryOfSmoking 
+		 ((0.25,        0.75),         // There is a histo 
+		  (0.05,        0.95));        // There is no hist ;
+	title = "Bronchitis";
+	whenchanged = 1240423262;
+	belief = (0.09, 0.91);
+	visual V2 {
+		center = (576, 342);
+		height = 3;
+		};
+	};
+
+node LungCancer {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (present, absent);
+	statetitles = ("Lung cancer is present", "Lung cancer is absent");
+	parents = (HistoryOfSmoking);
+	probs = 
+		// Lung cancer is p Lung cancer is a   // HistoryOfSmoking 
+		 ((0.003,       0.997),        // There is a histo 
+		  (5e-5,        0.99995));     // There is no hist ;
+	title = "Lung Cancer";
+	whenchanged = 1240423262;
+	belief = (6.4e-4, 0.99936);
+	visual V2 {
+		center = (576, 126);
+		height = 4;
+		};
+	};
+
+node Fatigue {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (present, absent);
+	statetitles = ("Fatigue is present", "Fatigue is absent");
+	parents = (Bronchitis, LungCancer);
+	probs = 
+		// Fatigue is prese Fatigue is absen    // Bronchitis       LungCancer       
+		(((0.75,        0.25),          // Bronchitis is pr Lung cancer is p 
+		  (0.1,         0.9)),          // Bronchitis is pr Lung cancer is a 
+		 ((0.5,         0.5),           // Bronchitis is ab Lung cancer is p 
+		  (0.05,        0.95)));        // Bronchitis is ab Lung cancer is a ;
+	title = "Fatigue";
+	whenchanged = 1240423262;
+	belief = (0.0548184, 0.9451816);
+	visual V2 {
+		center = (192, 180);
+		height = 2;
+		};
+	};
+
+node ChestXRay {
+	kind = NATURE;
+	discrete = TRUE;
+	chance = CHANCE;
+	states = (positive, negative);
+	statetitles = ("Chest X-ray is positive", "Chest X-ray is negative");
+	parents = (LungCancer);
+	probs = 
+		// Chest X-ray is p Chest X-ray is n   // LungCancer       
+		 ((0.6,         0.4),          // Lung cancer is p 
+		  (0.02,        0.98));        // Lung cancer is a ;
+	title = "Chest X-Ray";
+	whenchanged = 1240423262;
+	belief = (0.0203712, 0.9796288);
+	visual V2 {
+		center = (576, 30);
+		height = 5;
+		};
+	};
+ElimOrder = (ChestXRay, HistoryOfSmoking, Bronchitis, LungCancer, Fatigue);
+};
