@@ -1,8 +1,8 @@
 # Budgeted Machine Learning Framework for Bayesian Belief Networks
 
-Budgeted machine learning for Bayesian networks for use with the Norsys Netica API.
-
-# Overview
+[Norsys Netica](https://www.norsys.com/netica.html)
+[Netica APIs](https://www.norsys.com/netica_api.html)
+[Netica C API](https://www.norsys.com/netica_c_api.htm)
 
 The Budgeted Learning with Bayesian Network Experiment Framework (BLBN-EF)
 consists of two main components, in the form of computer programs: (1) the
@@ -36,8 +36,8 @@ head node):
 make
 ```
 
-This will invoke the make command with the makefile named 'Makefile'.  This
-will produce two executables: (1) blbn_learner and (2) blbn_generator.  To
+This will invoke the make command with the makefile named `Makefile`.  This
+will produce two executables: (1) `blbn_learner` and (2) `blbn_generator`.  To
 compile only the learner, run the command:
 
 ```
@@ -51,7 +51,7 @@ make generator
 ```
 
 To inspect the commands that are executed when the makefile is invoked, open
-the file named 'Makefile' in a text editor such as Vim or Emacs.
+the file named `Makefile` in a text editor such as Vim or Emacs.
 
 Alternatively, the following command can be run to manually compile the
 learner (however, this method should be considered a last resort, and should
@@ -72,8 +72,8 @@ Likewise, the following command can be run to manually compile the generator:
 ```
 
 For instructions on running the compiled `blbn_learner` and `blbn_generator`
-executables on Prairiefire, go to the section named "Running Experiments Using 
-the BLBN-EF".
+executables on Prairiefire, go to the section named _Running Experiments Using 
+the BLBN-EF_.
 
 For instructions on how to use the make command visit the [make documentation](http://www.gnu.org/software/make/manual/make.html).
 
@@ -148,42 +148,30 @@ make generator
 
 Run the generator with the following command:
 
-```
-./blbn_generator -d <data_file_path> -m <model_file_path> -c <case_count> -t <target_node_name>
-```
-
-For example, to run the generator for the BreastCancerWisconsin data set:
-
-```
-./blbn_generator -d ./data_base/BreastCancerWisconsin/BreastCancerWisconsin.cas -m ./data_base/BreastCancerWisconsin/BreastCancerWisconsin.dne -c 1000 -t Class
-```
-
 The short answer is that I generated the data sets using the `blbn_generator` program with input files that were the parameterized networks from the Netica Net Repository on the Norsys website. I wrote brief instructions about using the `blbn_generator` program in the README I wrote for you (which I've also attached to this email).  The general usage syntax for this program is as follows:
 
 ```
 ./blbn_generator -d <data_file_path> -m <model_file_path> -c <case_count> -t <target_node_name>
 ```
 
-We do not have good experimental results for the Bayes net structures learned from the UCI data sets.  I was unable to generate graphs that produced reasonable results (i.e., where the baseline of the Bayesian network classifier was lower than that of the naive Bayes classifier), which I believe was because I did not know how to assign direction to the links in Bayes nets learned from data that the network structure learning algorithm could not decide.  I did not know how to assign these directions because I was not familiar enough with the problem domains in which the networks were used.  I believe a good option would be to use some more of the available networks in the Netica Net Repository, in addition to the ChestClinic and ALARM structures.
+For example, to run the generator for the _BreastCancerWisconsin_ data set:
+
+```
+./blbn_generator -d ./data/BreastCancerWisconsin/BreastCancerWisconsin.cas -m ./data/BreastCancerWisconsin/BreastCancerWisconsin.dne -c 1000 -t Class
+```
 
 ## Convrting `*.neta` files to `*.dne` files
 
 Here's the command that I used to generate a `*.dne` file from a `*.neta` file:
 
 ```
-./blbn_generator -m ./data_raw/Animals/Animals.neta
+./blbn_generator -m ./data/Animals/Animals.neta
 ```
 
-I have a file located at `./data_raw/Animals/Animals.neta` and this command creates the file `./data_raw/Animals/Animals.dne`.
+I have a file located at `./data/Animals/Animals.neta` and this command creates the file `./data/Animals/Animals.dne`.
 
 # Dependencies
 
 [Norsys Netica](https://www.norsys.com/netica.html)
 [Netica APIs](https://www.norsys.com/netica_api.html)
 [Netica C API](https://www.norsys.com/netica_c_api.htm)
-
-# Q&A
-
-## When you generate the instances for these data sets, how many instances have you generated for each data sets?
-
-Hello again.  You can find how many instances were created for each data set by looking in the ./data_raw/ folder for the folder with a name that corresponds to a data set of interest (e.g., ./blbn/data_raw/ALARM for the ALARM data set).  The ./data_raw/ folder is located in the BLBN project directory.  There should be a *.cas file for each of the data sets (e.g., ./blbn/data_raw/ALARM/ALARM.cas for the ALARM data set).  You can look at the number of lines in the files to determine the total number of cases (e.g., there are 1000 cases for the ALARM data set).
