@@ -25,7 +25,7 @@
 // Indicates whether or not to print output to stdout
 #define BLBN_STDOUT 0
 
-#define LICENSE_STRING "+ScottS/UNebraska/310-5-A/19119"
+#define LICENSE_STRING "INSERT/LICENSE/STRING/HERE"
 
 #define BLBN_METADATA_FLAG_TARGET    0x01
 #define BLBN_METADATA_FLAG_PURCHASED 0x02
