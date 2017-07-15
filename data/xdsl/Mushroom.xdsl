@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000">
+	<nodes>
+		<cpt id="Class">
+			<state id="e" />
+			<state id="p" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="CapShape">
+			<state id="b" />
+			<state id="c" />
+			<state id="f" />
+			<state id="k" />
+			<state id="s" />
+			<state id="x" />
+			<parents>Class</parents>
+			<probabilities>0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667</probabilities>
+		</cpt>
+		<cpt id="CapSurface">
+			<state id="f" />
+			<state id="g" />
+			<state id="s" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="CapColor">
+			<state id="b" />
+			<state id="c" />
+			<state id="e" />
+			<state id="g" />
+			<state id="n" />
+			<state id="p" />
+			<state id="r" />
+			<state id="u" />
+			<state id="w" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1000000000000001 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1000000000000001</probabilities>
+		</cpt>
+		<cpt id="Bruises">
+			<state id="f" />
+			<state id="t" />
+			<parents>Class</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Odor">
+			<state id="a" />
+			<state id="c" />
+			<state id="f" />
+			<state id="l" />
+			<state id="m" />
+			<state id="n" />
+			<state id="p" />
+			<state id="s" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109</probabilities>
+		</cpt>
+		<cpt id="GillAttachment">
+			<state id="a" />
+			<state id="d" />
+			<state id="f" />
+			<state id="n" />
+			<parents>Class</parents>
+			<probabilities>0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="GillSpacing">
+			<state id="c" />
+			<state id="d" />
+			<state id="w" />
+			<parents>Class</parents>
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334 0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="GillSize">
+			<state id="b" />
+			<state id="n" />
+			<parents>Class</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GillColor">
+			<state id="b" />
+			<state id="e" />
+			<state id="g" />
+			<state id="h" />
+			<state id="k" />
+			<state id="n" />
+			<state id="o" />
+			<state id="p" />
+			<state id="r" />
+			<state id="u" />
+			<state id="w" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333326 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333333 0.08333333333333326</probabilities>
+		</cpt>
+		<cpt id="StalkShape">
+			<state id="e" />
+			<state id="t" />
+			<parents>Class</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="StalkRoot">
+			<state id="b" />
+			<state id="c" />
+			<state id="e" />
+			<state id="r" />
+			<state id="u" />
+			<state id="z" />
+			<parents>Class</parents>
+			<probabilities>0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667</probabilities>
+		</cpt>
+		<cpt id="StalkSurfaceAboveRing">
+			<state id="f" />
+			<state id="k" />
+			<state id="s" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="StalkSurfaceBelowRing">
+			<state id="f" />
+			<state id="k" />
+			<state id="s" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="StalkColorAboveRing">
+			<state id="b" />
+			<state id="c" />
+			<state id="e" />
+			<state id="g" />
+			<state id="n" />
+			<state id="o" />
+			<state id="p" />
+			<state id="w" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109</probabilities>
+		</cpt>
+		<cpt id="StalkColorBelowRing">
+			<state id="b" />
+			<state id="c" />
+			<state id="e" />
+			<state id="g" />
+			<state id="n" />
+			<state id="o" />
+			<state id="p" />
+			<state id="w" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109</probabilities>
+		</cpt>
+		<cpt id="VeilType">
+			<state id="p" />
+			<state id="u" />
+			<parents>Class</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="VeilColor">
+			<state id="n" />
+			<state id="o" />
+			<state id="w" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="RingNumber">
+			<state id="n" />
+			<state id="o" />
+			<state id="t" />
+			<parents>Class</parents>
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334 0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="RingType">
+			<state id="c" />
+			<state id="e" />
+			<state id="f" />
+			<state id="l" />
+			<state id="n" />
+			<state id="p" />
+			<state id="s" />
+			<state id="z" />
+			<parents>Class</parents>
+			<probabilities>0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125</probabilities>
+		</cpt>
+		<cpt id="SporePrintColor">
+			<state id="b" />
+			<state id="h" />
+			<state id="k" />
+			<state id="n" />
+			<state id="o" />
+			<state id="r" />
+			<state id="u" />
+			<state id="w" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111111 0.1111111111111109</probabilities>
+		</cpt>
+		<cpt id="Population">
+			<state id="a" />
+			<state id="c" />
+			<state id="n" />
+			<state id="s" />
+			<state id="v" />
+			<state id="y" />
+			<parents>Class</parents>
+			<probabilities>0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667</probabilities>
+		</cpt>
+		<cpt id="Habitat">
+			<state id="d" />
+			<state id="g" />
+			<state id="l" />
+			<state id="m" />
+			<state id="p" />
+			<state id="u" />
+			<state id="w" />
+			<parents>Class</parents>
+			<probabilities>0.1428571428571429 0.1428571428571429 0.1428571428571429 0.1428571428571429 0.1428571428571429 0.1428571428571429 0.142857142857143 0.1428571428571429 0.1428571428571429 0.1428571428571429 0.1428571428571429 0.1428571428571429 0.1428571428571429 0.142857142857143</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.3092.0" name="Network1" faultnameformat="nodestate">
+			<node id="CapShape">
+				<name>CapShape</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>260 540 312 572</position>
+				<barchart width="128" height="126" />
+			</node>
+			<node id="CapSurface">
+				<name>CapSurface</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>320 540 372 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="CapColor">
+				<name>CapColor</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>380 540 432 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Bruises">
+				<name>Bruises</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>440 540 492 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Odor">
+				<name>Odor</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>500 540 552 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="GillAttachment">
+				<name>GillAttachment</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>560 540 612 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="GillSpacing">
+				<name>GillSpacing</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>620 540 672 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="GillSize">
+				<name>GillSize</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>680 540 732 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="GillColor">
+				<name>GillColor</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>740 540 792 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="StalkShape">
+				<name>StalkShape</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>800 540 852 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="StalkRoot">
+				<name>StalkRoot</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>860 540 912 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="StalkSurfaceAboveRing">
+				<name>StalkSurfaceAboveRing</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>960 540 1012 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="StalkSurfaceBelowRing">
+				<name>StalkSurfaceBelowRing</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1020 540 1072 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="StalkColorAboveRing">
+				<name>StalkColorAboveRing</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1080 540 1132 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="StalkColorBelowRing">
+				<name>StalkColorBelowRing</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1140 540 1192 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="VeilType">
+				<name>VeilType</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1200 540 1252 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="VeilColor">
+				<name>VeilColor</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1260 540 1312 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="RingNumber">
+				<name>RingNumber</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1320 540 1372 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="RingType">
+				<name>RingType</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1380 540 1432 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="SporePrintColor">
+				<name>SporePrintColor</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1440 540 1492 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Population">
+				<name>Population</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1500 540 1552 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Habitat">
+				<name>Habitat</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1560 540 1612 572</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Class">
+				<name>Class</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>820 200 1065 288</position>
+				<barchart width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
