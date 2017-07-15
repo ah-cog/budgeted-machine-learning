@@ -6,16 +6,16 @@
 
 The Budgeted Learning with Bayesian Network Experiment Framework (BLBN-EF)
 consists of two main components, in the form of computer programs: (1) the
-learner and (2) the generator.  Both of these computer programs are implemented
+_learner_ and (2) the _generator_.  Both of these computer programs are implemented
 in the C programming language and make use of the BLBN application programming
-interface (API), which is also implemented in the C programming language.  The
-BLBN API depends on the Norsys Netica C API for its Bayesian network data
+interface (API), which is also implemented in the C programming language. The
+BLBN API depends on the [Norsys Netica](https://www.norsys.com/netica.html) [C API](https://norsys.com/netica_c_api.htm) for its Bayesian network data
 structures and algorithms.  The BLBN API does not include its own Bayesian
 network data structure implementation.  The BLBN API provides a framework for
 implementing budgeted machine learning algorithms that relies on the data
 structures and algorithms provided by the Netica C API whenever possible.
 
-The BLBN-EF and the BLBN API is intended to be used in an academic research
+The BLBN-EF and the BLBN API was built to be used in an academic research
 environment.  It has been designed to be simple and extensible, so new
 algorithms can be easily integrated into the API in a strightforward manner.
 To effectively use the BLBN-EF and BLBN API, it is crucial to be familiar with
@@ -29,7 +29,7 @@ designed to be compatible with the Holland Computing Center's (HCC) Prairiefire
 cluster, which is made up of nodes that run the Linux operating system.
 
 To compile the learner and generator components of the BLBN-EF, run the
-makefile using the 'make' command in a Linux terminal (such as the Prairiefire
+makefile using the `make` command in a Linux terminal (such as the Prairiefire
 head node):
 
 ```
